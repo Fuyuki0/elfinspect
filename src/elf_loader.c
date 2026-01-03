@@ -13,7 +13,7 @@ int load_elf(const char* filename) {
 	Elf64_Ehdr ehdr;
 	fread(&ehdr, 1, sizeof(ehdr), fp);
 
-	if (ehdr.e_ident[0] != 0x7f || ehdr.e_ident[1] != 'E' || ehdr.e_ident[2] != 'L' || ehdr.e_ident[3] != 'F' ||) {
+	if (ehdr.e_ident[0] != 0x7f || ehdr.e_ident[1] != 'E' || ehdr.e_ident[2] != 'L' || ehdr.e_ident[3] != 'F') {
 		printf("Not an ELF file\n");
 		fclose(fp);
 		return -1;
