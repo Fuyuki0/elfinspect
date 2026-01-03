@@ -25,8 +25,8 @@ int load_elf(const char* filename) {
 
 	printf("ELF Header: \n");
 
-	printf("	Class: %s\n", ehdr.e_indent[EI_CLASS] == ELFCLASS64 ? "ELF64" : "ELF32");
-	printf("	Endianness: %s\n", ehdr.e_indent[EI_DATA] == ELFCLASS64 ? "Little Endian" : "Big Endian");
+	printf("	Class: %s\n", ehdr.e_ident[EI_CLASS] == ELFCLASS64 ? "ELF64" : "ELF32");
+	printf("	Endianness: %s\n", ehdr.e_ident[EI_DATA] == ELFCLASS64 ? "Little Endian" : "Big Endian");
 
 	printf("	Entry point: 0x%lx\n", ehdr.e_entry);
 
