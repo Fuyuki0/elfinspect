@@ -1,2 +1,2 @@
-# elf_inspect
+# elfinspect
 Project for my own training arc
