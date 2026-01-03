@@ -21,12 +21,12 @@ int load_elf(const char* filename) {
 
 	printf("ELF Header: \n");
 
-	printf("	Class: %s\n", ehdr.e_ident[EI_CLASS] == ELFCLASS64 ? "ELF64" : "ELF32");
-	printf("	Endianness: %s\n", ehdr.e_ident[EI_DATA] == ELFCLASS64 ? "Little Endian" : "Big Endian");
+	printf("├───── Class: %s\n", ehdr.e_ident[EI_CLASS] == ELFCLASS64 ? "ELF64" : "ELF32");
+	printf("├───── Endianness: %s\n", ehdr.e_ident[EI_DATA] == ELFCLASS64 ? "Little Endian" : "Big Endian");
 
-	printf("	Entry point: 0x%lx\n", ehdr.e_entry);
+	printf("├───── Entry point: 0x%lx\n", ehdr.e_entry);
 
-	printf("	Machine: ");
+	printf("└───── Machine: ");
 	switch (ehdr.e_machine) {
 		case EM_X86_64: printf("x86-64\n"); break;
 		case EM_386: printf("x86\n"); break;
